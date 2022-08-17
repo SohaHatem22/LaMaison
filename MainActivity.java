@@ -12,13 +12,14 @@ public class MainActivity extends Activity {
     Context context;
     ArrayList prgmName;
     public static String [] prgmNameList={"Let Us C","c++","JAVA","Jsp","Microsoft .Net","Android","PHP","Jquery","JavaScript"};
-    public static int [] prgmImages={R.drawable.abc,R.drawable.abc,R.drawable.abc,R.drawable.abb,R.drawable.dodo,R.drawable.soso3,R.drawable.abb,R.drawable.dodo,R.drawable.soso3};
+    public static int [] prgmImages={R.drawable.abc,R.drawable.abb,R.drawable.soso3,R.drawable.dodo,R.drawable.abc,R.drawable.abb,R.drawable.soso3,R.drawable.dodo,R.drawable.abc};
+    public static String [] prgmNameList2={"Let Us C","c++","JAVA","Jsp","Microsoft .Net","Android","PHP","Jquery","JavaScript"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         gv=(GridView) findViewById(R.id.gridView1);
-        gv.setAdapter(new CustomAdapter(this, prgmNameList, prgmImages) {
+        gv.setAdapter(new CustomAdapter(this, prgmNameList, prgmImages,prgmNameList2) {
         });
     }
 
