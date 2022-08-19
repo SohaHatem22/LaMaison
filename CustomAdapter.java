@@ -1,5 +1,6 @@
 package com.example.gridview;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +18,21 @@ public class CustomAdapter extends BaseAdapter{
     String [] subss;
     int [] imageId;
     private static LayoutInflater inflater=null;
-    public CustomAdapter(MainActivity mainActivity, String[] prgmNameList, int[] prgmImages,String[] ppp) {
+    public CustomAdapter(MainActivity mainActivity, String[] prgmNameList, int[] prgmImages, String[] ppp) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
         context=mainActivity;
+        imageId=prgmImages;
+        subss=ppp;
+        inflater = ( LayoutInflater )context.
+                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+    }
+
+    public CustomAdapter(Groceries groceries, String[] prgmNameList, int[] prgmImages, String[] ppp) {
+        // TODO Auto-generated constructor stub
+        result=prgmNameList;
+        context=groceries;
         imageId=prgmImages;
         subss=ppp;
         inflater = ( LayoutInflater )context.
